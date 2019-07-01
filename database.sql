@@ -15,7 +15,7 @@ SELECT "usernames" AND "account_balance" * FROM "accounts" WHERE "transactions_a
 SELECT "usernames" AND "account_balance" * FROM "accounts" ORDER BY "account_balance" DESC LIMIT 3
 
 --6. How do you get the username and account balance of the 3 users wtih the lowest balances, sorted lowest to highest balance?
-SELECT * FROM "accounts" ORDER BY "account_balance" ASC LIMIT 3
+SELECT "usernames" AND "account_balance" * FROM "accounts" ORDER BY "account_balance" ASC LIMIT 3
 
 --7. How do you get all users with account balances that are more than $100?
 SELECT * FROM "accounts" WHERE "account_balance" > '100';
