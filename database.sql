@@ -9,13 +9,13 @@ SELECT * FROM "accounts" WHERE "account_balance" = '0' AND "transactions_attempt
 UPDATE "accounts" SET "account_balance" = '10.00' WHERE "username" = 'anthony';
 
 --4. How do you select all users that have attempted 9 or more transactions?
-SELECT "usernames" AND "account_balance" * FROM "accounts" WHERE "transactions_attempted" > '9';
+SELECT "usernames" FROM "accounts" WHERE "transactions_attempted" > '9';
 
---5. How do you get the username and account balance of the 3 uers with the highest balances, sorted highest to lowest balance? Research LIMIT
-SELECT "usernames" AND "account_balance" * FROM "accounts" ORDER BY "account_balance" DESC LIMIT 3
+--5. How do you get the username and account balance of the 3 users with the highest balances, sorted highest to lowest balance? Research LIMIT
+SELECT "username" , "account_balance" FROM "accounts" ORDER BY "account_balance" DESC LIMIT 3
 
 --6. How do you get the username and account balance of the 3 users wtih the lowest balances, sorted lowest to highest balance?
-SELECT "usernames" AND "account_balance" * FROM "accounts" ORDER BY "account_balance" ASC LIMIT 3
+SELECT "username" , "account_balance" FROM "accounts" ORDER BY "account_balance" ASC LIMIT 3
 
 --7. How do you get all users with account balances that are more than $100?
 SELECT * FROM "accounts" WHERE "account_balance" > '100';
